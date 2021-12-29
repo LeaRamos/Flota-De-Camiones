@@ -1,0 +1,185 @@
+{{#viajeEnCurso}}
+<div class="container mb-5 col-12 justify-content-center rounded" >
+    <h3 class="text-center mb-3">Empezar Viaje</h3>
+  
+    
+
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseOne"
+            aria-expanded="true"
+            aria-controls="panelsStayOpen-collapseOne"
+          >
+           Informacion del Viaje por empezar (anda a laburar)
+          </button>
+        </h2>
+        <div
+          id="panelsStayOpen-collapseOne"
+          class="accordion-collapse collapse show"
+          aria-labelledby="panelsStayOpen-headingOne"
+        >
+          <div class="accordion-body">
+            <form action="/chofer/empezarViaje" method="post">
+              <div class="form-row mb-2">
+                <div class="d-flex flex-wrap justify-content-center form-group">
+                  <div class="me-3 mt-3 col-lg-2">
+                    <label class="font-weight-bold mb-1"
+                      >Ciudad origen<span class="text-danger">*</span></label
+                    >
+                    <p
+                      class="form-control bg-light"
+                    > {{ciudad_origen}}
+                    </p>
+                    
+                  </div>
+                  <div class="me-3 mt-3 col-lg-2">
+                    <label class="font-weight-bold mb-1"
+                      >Ciudad destino<span class="text-danger">*</span></label
+                    >
+                    <p
+                    class="form-control bg-light"
+                  > {{ciudad_destino}}
+                  </p>
+                  </div>
+                  <div class="me-3 mt-3 col-lg-2">
+                    <label class="font-weight-bold mb-1"
+                      >Fecha inicio estipulada<span class="text-danger">*</span></label
+                    >
+                    <p
+                      class="form-control bg-light"
+                    > {{fecha_inicio}}
+                    </p>
+                  </div>
+
+                  <div class="me-3 mt-3 col-lg-2">
+                    <label class="font-weight-bold mb-1"
+                      >Fecha fin estipulada<span class="text-danger">*</span></label
+                    >
+                    <p
+                      class="form-control bg-light"
+                    > {{fecha_fin}}
+                    </p>
+                  </div>
+
+                  <div class="me-3 mt-3 col-lg-2">
+                    <label class="font-weight-bold mb-1"
+                      >Tiempo estimado<span class="text-danger">*</span></label
+                    >
+                    <p
+                      class="form-control bg-light"
+                    > {{tiempo_estimado}}
+                    </p>
+                  </div>
+
+  
+                  <div class="me-3 mt-3 col-lg-2">
+                    <label class="font-weight-bold mb-1"
+                      >Tipo carga<span class="text-danger">*</span></label
+                    >
+                    <p
+                      class="form-control bg-light"
+                    > {{descripcion_carga}}
+                    </p>
+                  </div>
+
+
+                  <div class="me-3 mt-3 col-lg-2">
+                    <label class="font-weight-bold mb-1"
+                      >Kilometros previstos<span class="text-danger"
+                        >*</span
+                      ></label
+                    >
+                    <p
+                      class="form-control bg-light"
+                    > {{km_previsto}}
+                    </p>
+                  </div>
+
+
+
+                  <div class="me-3 mt-3 col-lg-2">
+                    <label class="font-weight-bold mb-1 bg-light"
+                      >Combustible estimado<span class="text-danger"
+                        >*</span
+                      ></label
+                    >
+                    <p
+                      class="form-control bg-light"
+                    > {{combustible_estimado}}
+                    </p>
+                  </div>
+                 
+                  <div class="me-3 mt-3 col-lg-2">
+                    <label class="font-weight-bold mb-1"
+                      >Vehiculo<span class="text-danger">*</span></label
+                    >
+                    <p
+                      class="form-control bg-light"
+                    > {{tipo_vehiculo}}
+                    </p>
+                  </div>
+  
+              
+                  <div class="me-3 mt-3 col-lg-2">
+                    <label class="font-weight-bold mb-1"
+                      >Latitud<span class="text-danger">*</span></label
+                    >
+                    <input
+                      type="number"
+                      step="any"
+                      name="latitud_inicio"
+                      class="form-control"
+                      placeholder="latitud"
+                      id="latitud_inicio"
+                      value=""
+                      
+                    />
+                  </div>
+
+
+  
+                  <div class="me-3 col-lg-2">
+                    <label class="font-weight-bold mb-1"
+                      >Longitud<span class="text-danger">*</span></label
+                    >
+                    <input
+                      type="number"
+                      step="any"
+                      name="longitud_inicio"
+                      class="form-control"
+                      placeholder="Longitud"
+                      id="longitud_inicio"    
+                      value=""        
+                    />
+                  </div>
+
+                  <div class="card-text">
+                    <label class="font-weight-bold mb-1">Direccion<span class="text-danger">*</span></label>
+                    <input type="text" name="direccionActual" class="form-control" placeholder="Direccion"
+                      id="lugarIncio" value=""/>
+                  </div>
+
+                <input type="hidden" name="id_viaje" value="{{id}}">
+
+
+                </div>
+              </div>
+
+              
+
+              <div class="d-flex justify-content-center mt-5">
+                <button type="submit" class="btn btn-primary ">Empezar viaje</button>
+              </div>
+            </form>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/viajeEnCurso}}

@@ -1,0 +1,290 @@
+<!-- Navbar -->
+<nav class="container-fluid navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <button
+                class="btn btn-dark"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample"
+                aria-controls="offcanvasExample"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand me-auto ms-lg-2 ms-3 text-uppercase fw-bold" href="{{url}}">Página Camiones</a
+        >
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#topNavBar"
+                aria-controls="topNavBar"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="topNavBar">
+            <form class="d-flex ms-auto my-3 my-lg-0">
+                <div class="input-group">
+                    <input
+                            class="form-control"
+                            type="search"
+                            placeholder="Search"
+                            aria-label="Search"
+                    />
+                    <button class="btn btn-primary" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </form>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a
+                            class="nav-link dropdown-toggle ms-2"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                    >
+                        <i class="bi bi-person-fill"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                            <a class="dropdown-item" href="/admin/cerrarSesion">Logout</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--Fin Navbar -->
+
+<style>
+
+    #botones:hover {
+        background: #0c63e4;
+    }
+
+
+</style>
+
+<!--Menú vertical-->
+<div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel"
+>
+    <div
+            class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark h-100 w-100"
+    >
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">{{rol}}</h5>
+            <button
+                    type="button"
+                    class="btn-close btn-close-white text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+            ></button>
+        </div>
+        <hr/>
+        <ul class="nav nav-pills flex-column mb-auto">
+
+            {{#rutaUsuariosSinRol}}
+                <li class="nav-item">
+                    <a href="{{rutaUsuariosSinRol}}" id="botones" class="nav-link text-white" aria-current="page">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                class="bi bi-house-door me-2 mb-1"
+                                viewBox="0 0 16 16"
+                        >
+                            <path
+                                    d="{{iconoUsuariosSinRol}}"
+
+                            />
+
+                            <path
+                                    d="{{iconoUsuariosSinRol2}}"
+
+                            />
+                        </svg>
+                        {{usuariosSinRolBoton}}
+                    </a>
+                </li>
+
+            {{/rutaUsuariosSinRol}}
+            {{#rutaPrimerBoton}}
+                <li class="nav-item">
+                    <a href="{{rutaPrimerBoton}}" id="botones" class="nav-link text-white" aria-current="page">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                class="bi bi-house-door me-2 mb-1"
+                                viewBox="0 0 16 16"
+                        >
+                            <path
+                                    d="{{iconoPrimerBoton}}"
+
+                            />
+
+                            <path
+                                    d="{{iconoPrimerBoton2}}"
+
+                            />
+                        </svg>
+                        {{primerBoton}}
+                    </a>
+                </li>
+
+            {{/rutaPrimerBoton}}
+            {{#rutaSegundoBoton}}
+                <li>
+                    <a id="botones" href="{{rutaSegundoBoton}}" class="nav-link text-white">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                class="bi bi-house-door me-2 mb-1"
+                                viewBox="0 0 16 16"
+                        >
+                            <path
+                                    d="{{iconoSegundoBoton}}"
+
+                            />
+
+                            <path
+                                    d="{{iconoSegundoBoton2}}"
+
+                            />
+                        </svg>
+                        {{segundoBoton}}
+                    </a>
+                </li>
+            {{/rutaSegundoBoton}}
+            {{#rutaTercerBoton}}
+                <li>
+                    <a id="botones" href="{{rutaTercerBoton}}" class="nav-link text-white">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                class="bi bi-house-door me-2 mb-1"
+                                viewBox="0 0 16 16"
+                        >
+                            <path
+                                    d="{{iconoTercerBoton}}"
+
+                            />
+
+                            <path
+                                    d=""
+
+                            />
+                        </svg>
+                        {{tercerBoton}}
+                    </a>
+                </li>
+            {{/rutaTercerBoton}}
+            {{#rutaCuartoBoton}}
+
+                <li>
+                    <a id="botones" href="{{rutaCuartoBoton}}" class="nav-link text-white">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                class="bi bi-house-door me-2 mb-1"
+                                viewBox="0 0 16 16"
+                        >
+                            <path
+                                    d="{{iconoCuartoBoton}}"
+
+                            />
+
+                            <path
+                                    d="{{iconoCuartoBoton2}}"
+
+                            />
+                        </svg>
+                        {{cuartoBoton}}
+                    </a>
+                </li>
+
+            {{/rutaCuartoBoton}}
+
+            {{#rutaQuintoBoton}}
+                <li>
+                    <a id="botones" href="{{rutaQuintoBoton}}" class="nav-link text-white">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                class="bi bi-house-door me-2 mb-1"
+                                viewBox="0 0 16 16"
+                        >
+                            <path
+                                    d="{{iconoQuintoBoton}}"
+
+                            />
+
+                            <path
+                                    d=""
+
+                            />
+                        </svg>
+                        {{quintoBoton}}
+                    </a>
+                </li>
+            {{/rutaQuintoBoton}}
+
+        </ul>
+        <hr/>
+        <div class="dropdown">
+            <a
+                    href="#"
+                    class="
+          d-flex
+          align-items-center
+          text-white text-decoration-none
+          dropdown-toggle
+        "
+                    id="dropdownUser1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                     class="bi bi-person-circle me-2" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                    <path fill-rule="evenodd"
+                          d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                </svg>
+                <strong class="me-2">{{nombre}}</strong>
+                <strong>{{apellido}}</strong>
+            </a>
+            <ul
+                    class="dropdown-menu dropdown-menu-dark text-small shadow"
+                    aria-labelledby="dropdownUser1"
+            >
+                <li><!--<a class="dropdown-item" href="#">New project...</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li>
+                    <hr class="dropdown-divider"/>-->
+                </li>
+                <li><a class="dropdown-item" href="/admin/cerrarSesion">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--Fin Menú vertical-->
